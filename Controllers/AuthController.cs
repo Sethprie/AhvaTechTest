@@ -63,5 +63,16 @@ namespace AhvaTechTest.Controllers
             HttpContext.Session.Clear();
             return RedirectToAction("Login");
         }
+        public IActionResult ExpireSession()
+        {
+            HttpContext.Session.Clear();
+            TempData["SessionExpired"] = "Su sesión ha expirado debido a inactividad. Por favor, inicie sesión nuevamente.";
+            return RedirectToAction("Login");
+        }
+
+        public IActionResult Ping()
+        {
+            return Ok(); // solo para tocar la sesión y evitar el IdleTimeout del servidor
+        }
     }
 }

@@ -36,7 +36,25 @@ namespace AhvaTechTest.Controllers
                 FullName = user.FullName ?? "",
                 Position = user.Position ?? "",
                 Entity = user.Entity ?? "",
-                Status = user.Status ?? ""
+                Status = user.Status ?? "",
+
+                FirstNames = "July Camila",
+                DocumentType = user.DocumentType,
+                Nationality = "Peruana",
+                SecondaryEmail = null,
+                ContractType = "CAS",
+
+                LastNameFirst = "Mendoza",
+                DocumentNumber = user.DocumentNumber,
+                Gender = "Femenino",
+                MobilePhone = "+51 999 999 999",
+                HireDate = new DateTime(2015, 3, 9),
+
+                LastNameSecond = "Quispe",
+                BirthDate = new DateTime(1944, 4, 15),
+                PrimaryEmail = "test@minsa.gob.pe",
+                SecondaryPhone = null,
+                SecondaryPhoneType = null
             };
 
             return View(viewModel);
