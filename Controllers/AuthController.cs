@@ -41,6 +41,8 @@ namespace AhvaTechTest.Controllers
 
                 case LoginStatus.InvalidCredentials:
                     model.ErrorMessage = "Usuario y/o contraseña incorrectos.";
+                    ModelState.AddModelError("DocumentNumber", "");
+                    ModelState.AddModelError("Password", "");
                     return View(model);
 
                 case LoginStatus.AccountLocked:
