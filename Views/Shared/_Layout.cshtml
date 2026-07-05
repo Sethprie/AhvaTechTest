@@ -6,6 +6,9 @@
     <title>@ViewData["Title"] - AhvaTechTest</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AhvaTechTest.styles.css" asp-append-version="true" />
 </head>
@@ -39,8 +42,9 @@
                     @if (userId != null)
                     {
                         <div class="d-flex align-items-center gap-3 text-white">
-                            <span title="Notificaciones" style="cursor:pointer">🔔</span>
-                            <span title="Usuario" style="cursor:pointer">👤</span>
+                            <i class="bi bi-bell-fill fs-5" title="Notificaciones" style="cursor:pointer"></i>
+                            <i class="bi bi-person-circle fs-5" title="Usuario" style="cursor:pointer"></i>
+                            
                             <span>@fullName</span>
                             <a asp-controller="Auth" asp-action="Logout" class="btn btn-sm btn-outline-light">Cerrar sesión</a>
                         </div>

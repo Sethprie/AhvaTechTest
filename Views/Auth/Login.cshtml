@@ -25,7 +25,9 @@
             <label asp-for="Password" class="form-label">Contraseña</label>
             <div class="input-group">
                 <input asp-for="Password" id="password" type="password" class="form-control @(ViewData.ModelState["Password"]?.Errors.Count > 0 ? "is-invalid" : "")" />
-                <button class="btn btn-outline-secondary" type="button" id="togglePassword">👁️</button>
+                <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                    <i class="bi bi-eye-fill"></i>
+                </button>
             </div>
             <span asp-validation-for="Password" class="text-danger"></span>
         </div>
@@ -47,7 +49,9 @@
         const pwd = document.getElementById("password");
         const isPassword = pwd.type === "password";
         pwd.type = isPassword ? "text" : "password";
-        this.textContent = isPassword ? "🙈" : "👁️";
+        
+        // Se reemplaza textContent con innerHTML para inyectar el icono de Bootstrap
+        this.innerHTML = isPassword ? '<i class="bi bi-eye-slash-fill"></i>' : '<i class="bi bi-eye-fill"></i>';
     });
 
     // Botón "Ingresar" deshabilitado hasta llenar ambos campos

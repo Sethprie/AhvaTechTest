@@ -1,17 +1,15 @@
 @model AhvaTechTest.Models.ViewModels.ProfileViewModel
 
 <div class="d-flex">
-    <!-- Menú lateral mock -->
     <div class="d-flex flex-column align-items-center bg-light border-end p-2" style="width: 60px; min-height: 80vh;">
-        <button class="btn btn-sm mb-3" title="Expandir">☰</button>
-        <button class="btn btn-sm mb-3" title="Home">🏠</button>
-        <button class="btn btn-sm mb-3" title="Entidades">🏢</button>
-        <button class="btn btn-sm mb-3" title="Documentos">📄</button>
-        <button class="btn btn-sm mb-3" title="Buscar">🔍</button>
+        <button class="btn btn-sm mb-3" title="Expandir"><i class="bi bi-list fs-5"></i></button>
+        <button class="btn btn-sm mb-3" title="Home"><i class="bi bi-house-door fs-5"></i></button>
+        <button class="btn btn-sm mb-3" title="Entidades"><i class="bi bi-building fs-5"></i></button>
+        <button class="btn btn-sm mb-3" title="Documentos"><i class="bi bi-file-earmark-text fs-5"></i></button>
+        <button class="btn btn-sm mb-3" title="Buscar"><i class="bi bi-search fs-5"></i></button>
     </div>
 
     <div class="flex-grow-1 p-3">
-        <!-- Card superior -->
         <div class="card p-3 mb-3">
             <div class="d-flex align-items-center gap-3">
                 <div class="bg-secondary rounded-circle" style="width: 70px; height: 70px;"></div>
@@ -24,7 +22,6 @@
             </div>
         </div>
 
-        <!-- 3 columnas -->
         <div class="row">
             <div class="col-md-4">
                 <p><strong>Nombres:</strong><br />@Model.FirstNames</p>
@@ -37,13 +34,13 @@
                 <p><strong>Primer Apellido:</strong><br />@Model.LastNameFirst</p>
                 <p><strong>N° de Documento de Identidad:</strong><br />@Model.DocumentNumber</p>
                 <p><strong>Sexo:</strong><br />@Model.Gender</p>
-                <p><strong>Teléfono Móvil:</strong><br />@Model.MobilePhone <span title="Editar" style="cursor:pointer;">✏️</span></p>
+                <p><strong>Teléfono Móvil:</strong><br />@Model.MobilePhone <i class="bi bi-pencil-fill text-primary ms-1" title="Editar" style="cursor:pointer;"></i></p>
                 <p><strong>Fecha de contratación:</strong><br />@Model.HireDate.ToString("dd/MM/yyyy")</p>
             </div>
             <div class="col-md-4">
                 <p><strong>Segundo Apellido:</strong><br />@Model.LastNameSecond</p>
                 <p><strong>Fecha de nacimiento:</strong><br />@Model.BirthDate.ToString("dd/MM/yyyy")</p>
-                <p><strong>Correo electrónico principal:</strong><br />@Model.PrimaryEmail <span title="Editar" style="cursor:pointer;">✏️</span></p>
+                <p><strong>Correo electrónico principal:</strong><br />@Model.PrimaryEmail <i class="bi bi-pencil-fill text-primary ms-1" title="Editar" style="cursor:pointer;"></i></p>
                 <p>
                     <strong>Teléfono secundario (Opcional):</strong><br />
                     @(Model.SecondaryPhone ?? "-")
@@ -57,8 +54,6 @@
         </div>
     </div>
 </div>
-
-<!-- Aquí sigue tu modal de sesión existente, no lo borres -->
 
 @section Scripts {
 <script>
