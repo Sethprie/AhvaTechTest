@@ -1,24 +1,38 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using AhvaTechTest.Models;
+using AhvaTechTest.Data;
+using AhvaTechTest.Models.ViewModels;
 
-namespace AhvaTechTest.Controllers;
-
-public class HomeController : Controller
+namespace AhvaTechTest.Controllers
 {
-    public IActionResult Index()
+    public class HomeController : Controller
     {
-        return View();
-    }
+        private readonly AppDbContext _context;
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+        public HomeController(AppDbContext context)
+        {
+            _context = context;
+        }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        public IActionResult Index()
+        {
+            // Hardcodeado solo para esta prueba: usuario Id=1 del seeder
+            var user = _context.Users.Find(1);
+
+            var firstName = "Usuario";
+
+            if (user?.FullName != null && user.FullName.Contains(','))
+            {
+                // FullName tiene formato "Apellido Apellido, Nombres"
+                var namesPart = user.FullName.Split(',')[1].Trim();
+                firstName = namesPart.Split(' ')[0];
+            }
+
+            var viewModel = new WelcomeViewModel
+            {
+                FirstName = firstName
+            };
+
+            return View(viewModel);
+        }
     }
 }

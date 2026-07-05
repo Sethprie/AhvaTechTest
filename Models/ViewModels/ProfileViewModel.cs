@@ -2,7 +2,6 @@ namespace AhvaTechTest.Models.ViewModels
 {
     public class ProfileViewModel
     {
-        // Header (ya existe, viene de sesión)
         public string FullName { get; set; } = string.Empty;
         public string Position { get; set; } = string.Empty;
         public string Entity { get; set; } = string.Empty;

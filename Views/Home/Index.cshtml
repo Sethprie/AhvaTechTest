@@ -1,20 +1,15 @@
-﻿@{
+﻿@model AhvaTechTest.Models.ViewModels.WelcomeViewModel
+@{
     ViewData["Title"] = "Bienvenida";
 }
 
-<div class="card p-4 mx-auto text-center" style="max-width: 500px;">
-    <img src="~/images/welcome.png" alt="Bienvenida" class="mx-auto mb-3" style="max-width: 200px;" />
+<div class="card border-0 shadow-sm p-4 mx-auto text-center welcome-card">
+    <img src="~/images/ceplan-illustration-success.png" alt="Bienvenida" class="mx-auto mb-3 welcome-illustration" />
 
-    <h3>Bienvenido al Sistema de Gestión</h3>
+    <h3>¡Bienvenida, @Model.FirstName!</h3>
 
-    <p>
-        Este sistema te permite consultar y gestionar la información
-        de tu perfil de forma rápida y segura.
-    </p>
-    <p>
-        Para continuar, inicia sesión con tu documento de identidad
-        y contraseña asignados.
-    </p>
+    <p>Su cuenta en el aplicativo X está activada.</p>
+    <p>Ya puede iniciar sesión.</p>
 
     <a asp-controller="Auth" asp-action="Login" class="btn btn-primary mt-2">Iniciar sesión</a>
 </div>

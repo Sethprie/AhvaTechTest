@@ -9,45 +9,63 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AhvaTechTest.styles.css" asp-append-version="true" />
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+
+    <img src="~/images/ilustration.png" 
+        style="position: fixed; 
+                bottom: 0; 
+                left: 50%; 
+                transform: translateX(-50%); 
+                z-index: -1; 
+                pointer-events: none;" 
+        alt="" />
+
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-dark border-bottom box-shadow mb-3" 
+            style="background-color: #9A1413; padding: 14px 24px;">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AhvaTechTest</a>
+                <a asp-controller="Home" asp-action="Index">
+                    <img src="~/images/ceplan-logo.png" style="width: 88px; height: 44px;" alt="Logo" />
+                </a>
 
-                @{
-                    var userId = Context.Session.GetInt32("UserId");
-                    var fullName = Context.Session.GetString("FullName");
-                }
+                <div class="d-flex align-items-center gap-3">
+                    <img src="~/images/question.png" style="width: 40px; height: 40px;" title="Ayuda" />
 
-                @if (userId != null)
-                {
-                    <div class="d-flex align-items-center gap-3">
-                        <span title="Ayuda">❓</span>
-                        <span title="Notificaciones">🔔</span>
-                        <span title="Usuario">👤</span>
-                        <span class="text-dark">@fullName</span>
-                        <a asp-controller="Auth" asp-action="Logout" class="btn btn-sm btn-outline-secondary">Cerrar sesión</a>
-                    </div>
-                }
-                else
-                {
-                    <a asp-controller="Auth" asp-action="Login" class="btn btn-sm btn-outline-primary">Iniciar sesión</a>
-                }
+                    @{
+                        var userId = Context.Session.GetInt32("UserId");
+                        var fullName = Context.Session.GetString("FullName");
+                    }
+
+                    @if (userId != null)
+                    {
+                        <div class="d-flex align-items-center gap-3 text-white">
+                            <span title="Notificaciones" style="cursor:pointer">🔔</span>
+                            <span title="Usuario" style="cursor:pointer">👤</span>
+                            <span>@fullName</span>
+                            <a asp-controller="Auth" asp-action="Logout" class="btn btn-sm btn-outline-light">Cerrar sesión</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <a asp-controller="Auth" asp-action="Login" class="btn btn-sm btn-outline-light">Iniciar sesión</a>
+                    }
+                </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+
+    <div class="container flex-grow-1">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - AhvaTechTest - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer border-top bg-white" style="height: 72px; border-top: 1px solid #C9CDD0;">
+        <div class="container-fluid d-flex justify-content-end align-items-center h-100" style="padding: 14px 39px;">
+            <img src="~/images/footer-banner.png" style="width: 380.6px; height: 44px;" alt="Footer Banner" />
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

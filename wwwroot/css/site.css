@@ -1,5 +1,6 @@
 html {
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -17,10 +18,6 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
-
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
   color: var(--bs-secondary-color);
   text-align: end;
@@ -28,4 +25,40 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+.brand-navbar {
+    background-color: #9A1413;
+    padding: 14px 24px;
+}
+
+.brand-logo {
+    width: 88px;
+    height: 44px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.site-footer {
+    height: 72px;
+    border-top: 1px solid #C9CDD0;
+}
+
+.footer-banner {
+    width: 380.6px;
+    height: 44px;
+    max-width: 100%;
+}
+
+.welcome-card {
+    max-width: 420px;
+    border-radius: 12px;
+}
+
+.welcome-illustration {
+    width: 180px;
+    height: auto;
 }
