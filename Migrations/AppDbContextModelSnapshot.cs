@@ -92,7 +92,7 @@ namespace AhvaTechTest.Migrations
                             FailedAttemptsCount = 0,
                             FullName = "Mendoza Quispe, July Camila",
                             IsLocked = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEJ8f3z9y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8=",
+                            PasswordHash = "$2b$12$PULZmKmGy7dCdzZh9MmzOeK5x/SKYeXwyBAT.Wte082e4Iat7QrTO",
                             Position = "Administrador de Recursos",
                             Status = "Activo",
                             Username = "jmendoza"
@@ -107,7 +107,7 @@ namespace AhvaTechTest.Migrations
                             FullName = "Usuario De Prueba, Bloqueado",
                             IsLocked = true,
                             LockedAt = new DateTime(2026, 7, 5, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            PasswordHash = "AQAAAAIAAYagAAAAEJ8f3z9y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8=",
+                            PasswordHash = "$2b$12$PULZmKmGy7dCdzZh9MmzOeK5x/SKYeXwyBAT.Wte082e4Iat7QrTO",
                             Position = "Operador",
                             Status = "Activo",
                             Username = "bloqueado"

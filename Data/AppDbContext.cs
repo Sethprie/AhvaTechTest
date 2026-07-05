@@ -27,7 +27,7 @@ namespace AhvaTechTest.Data
                     DocumentType = "DNI",
                     DocumentNumber = "07079879",
                     Username = "jmendoza",
-                    PasswordHash = "AQAAAAIAAYagAAAAEJ8f3z9y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8=", // placeholder
+                    PasswordHash = "$2b$12$PULZmKmGy7dCdzZh9MmzOeK5x/SKYeXwyBAT.Wte082e4Iat7QrTO", // Password123!
                     FailedAttemptsCount = 0,
                     IsLocked = false,
                     FullName = "Mendoza Quispe, July Camila",
@@ -41,7 +41,7 @@ namespace AhvaTechTest.Data
                     DocumentType = "DNI",
                     DocumentNumber = "12345678",
                     Username = "bloqueado",
-                    PasswordHash = "AQAAAAIAAYagAAAAEJ8f3z9y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8=", // placeholder
+                    PasswordHash = "$2b$12$PULZmKmGy7dCdzZh9MmzOeK5x/SKYeXwyBAT.Wte082e4Iat7QrTO", // Password123!
                     FailedAttemptsCount = 5,
                     IsLocked = true,
                     LockedAt = new DateTime(2026, 7, 5, 12, 0, 0),

@@ -41,8 +41,8 @@ namespace AhvaTechTest.Migrations
                 columns: new[] { "Id", "DocumentNumber", "DocumentType", "Entity", "FailedAttemptsCount", "FullName", "IsLocked", "LockedAt", "PasswordHash", "Position", "Status", "Username" },
                 values: new object[,]
                 {
-                    { 1, "07079879", "DNI", "011 Ministerio de Salud", 0, "Mendoza Quispe, July Camila", false, null, "AQAAAAIAAYagAAAAEJ8f3z9y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8=", "Administrador de Recursos", "Activo", "jmendoza" },
-                    { 2, "12345678", "DNI", "011 Ministerio de Salud", 5, "Usuario De Prueba, Bloqueado", true, new DateTime(2026, 7, 5, 12, 0, 0, 0, DateTimeKind.Unspecified), "AQAAAAIAAYagAAAAEJ8f3z9y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8y8=", "Operador", "Activo", "bloqueado" }
+                    { 1, "07079879", "DNI", "011 Ministerio de Salud", 0, "Mendoza Quispe, July Camila", false, null, "$2b$12$PULZmKmGy7dCdzZh9MmzOeK5x/SKYeXwyBAT.Wte082e4Iat7QrTO", "Administrador de Recursos", "Activo", "jmendoza" },
+                    { 2, "12345678", "DNI", "011 Ministerio de Salud", 5, "Usuario De Prueba, Bloqueado", true, new DateTime(2026, 7, 5, 12, 0, 0, 0, DateTimeKind.Unspecified), "$2b$12$PULZmKmGy7dCdzZh9MmzOeK5x/SKYeXwyBAT.Wte082e4Iat7QrTO", "Operador", "Activo", "bloqueado" }
                 });
 
             migrationBuilder.CreateIndex(
